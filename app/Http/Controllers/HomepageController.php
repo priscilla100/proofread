@@ -11,4 +11,5 @@ class HomepageController extends Controller
         return view('layouts.homepage');
 
     }
+
 }

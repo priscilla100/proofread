@@ -1,32 +1,47 @@
-@extends('layouts.app')
+@extends('master')
 
 @section('content')
 <div class="container">
-    <div class="row">
+    {{--<div class="row">--}}
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                {{--<div class="panel-heading">Dashboard</div>--}}
 
                 <div class="panel-body">
-                    <div class="col-lg-offset-4 col-lg-4">
-                        <h1>Upload A File</h1>
-                        <form action="/store" enctype="multipart/form-data" method="post">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <h2>Upload Files Here</h2>
+                    {{--@if(count($errors))--}}
+                        {{--<ul>--}}
+                            {{--@foreach($errors->all() as $error)--}}
 
-                            {{--{{ csrf_field() }}--}}
+                                {{--<li>{{ $error }}</li>--}}
 
-                            <input type="file" name="image">
-                            <br>
+                            {{--@endforeach--}}
 
-                            <input type="submit" value="Upload">
-                        </form>
-                    </div>
+                        {{--</ul>--}}
+                    {{--@endif--}}
 
+                    {{--<ul class="container">--}}
+                        {{--@foreach($files as $file)--}}
+                            {{--<li class="list-group-item">{{ $file->filename }}<button class="fa fa-download pull-right">   Download</button></li>--}}
+                        {{--@endforeach--}}
+
+                    {{--</ul>--}}
+
+
+                    <form action="/handleUpload" method="post" enctype="multipart/form-data" class="form-group">
+                        {{ csrf_field() }}
+                        <input type="file" name="file" multiple class="">
+
+                        <div>
+                            <input type="submit" class="btn-primary" value="Upload File">
+
+                        </div>
+                    </form>
 
 
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 @endsection

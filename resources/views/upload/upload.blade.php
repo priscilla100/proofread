@@ -17,16 +17,7 @@
                                 <input type="submit">
                             </form>
 
-                            <h1> Pictures list</h1>
 
-                            <div class="row">
-
-                                {{--<ul>--}}
-                                    {{--@foreach($uploads as $upload)--}}
-                                        {{--<li>{{$uplaod->doc_name}}</li>--}}
-                                    {{--@endforeach--}}
-                                {{--</ul>--}}
-                            </div>
                         </div>
 
                     </div>

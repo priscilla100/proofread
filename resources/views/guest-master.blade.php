@@ -49,46 +49,61 @@
 
 </div> <!-- /.navbar -->
 
-    @if(Auth::check())
 
-        <div class="mainbar">
+    <hr class="account-header-divider">
 
-            @include('include.mainbar')
+    <div class="account-wrapper">
 
-        </div> <!-- /.mainbar -->
+        <div class="account-logo">
+            <img src="{{ asset('Theme/img/logo-login.png') }}" alt="Target Admin">
+        </div>
 
-    @else
-
-        <div style="margin-top: 120px;"></div>
-
-    @endif
+        <div class="account-body">
 
 
-    <div class="container">
-
-        <div class="content">
-
-            <div class="content-container">
+            @yield('content')
 
 
-                <div class="content-header">
-                    <h2 class="content-header-title">Blank Page</h2>
-                    <ol class="breadcrumb">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="javascript:;">Extra Pages</a></li>
-                        <li class="active">Blank Page</li>
-                    </ol>
-                </div> <!-- /.content-header -->
+            {{--<form class="form account-form" method="POST" action="{{ route('login') }}">--}}
+
+                {{--{{ csrf_field() }}--}}
+
+                {{--<div class="form-group">--}}
+                    {{--<label for="login-username" class="placeholder-hidden">Username</label>--}}
+                    {{--<input type="text" class="form-control" id="login-username" placeholder="Username" tabindex="1">--}}
+
+                {{--</div> <!-- /.form-group -->--}}
+
+                {{--<div class="form-group">--}}
+                    {{--<label for="login-password" class="placeholder-hidden">Password</label>--}}
+                    {{--<input type="password" class="form-control" id="login-password" placeholder="Password" tabindex="2">--}}
+                {{--</div> <!-- /.form-group -->--}}
+
+                {{--<div class="form-group clearfix">--}}
+                    {{--<div class="pull-left">--}}
+                        {{--<label class="checkbox-inline">--}}
+                            {{--<input type="checkbox" class="" value="" tabindex="3">Remember me--}}
+                        {{--</label>--}}
+                    {{--</div>--}}
+
+                    {{--<div class="pull-right">--}}
+                        {{--<a href="/reset">Forgot Password?</a>--}}
+                    {{--</div>--}}
+                {{--</div> <!-- /.form-group -->--}}
+
+                {{--<div class="form-group">--}}
+                    {{--<button type="submit" class="btn btn-primary btn-block btn-lg" tabindex="4">--}}
+                        {{--Signin &nbsp; <i class="fa fa-play-circle"></i>--}}
+                    {{--</button>--}}
+                {{--</div> <!-- /.form-group -->--}}
+
+            {{--</form>--}}
 
 
-                @yield('content')
+        </div> <!-- /.account-body -->
 
-
-            </div> <!-- /.content-container -->
-
-        </div> <!-- /.content -->
-
-    </div> <!-- /.container -->
+        @yield('account-footer')
+    </div> <!-- /.account-wrapper -->
 
 
 <footer class="footer">

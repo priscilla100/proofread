@@ -4,39 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\UploadedFile;
-use Illuminate\Support\Facades\Storage;
-
-class HomeController extends Controller
+class FilesController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function upload()
     {
-        $this->middleware('auth');
+        return view('files.upload');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('home');
 
-    }
-    public function upload(){
-        $directory = 'FileUpload';
-//        $files = Storage::files($directory);
-
-
-        $files = UploadedFile::all();
-
-        return view('files.upload')->with(array('files' => $files));
-    }
     public function handleUpload(Request $request){
         if($request->hasFile('file')){
             $file = $request->file('file');
@@ -63,8 +38,7 @@ class HomeController extends Controller
 
             }
         }
-        return redirect()->to('/uploaded');
+        return redirect()->to('/upload');
     }
-
 
 }

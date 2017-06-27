@@ -1,5 +1,5 @@
 <?php
-
+use App\UploadedFile;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,16 +24,19 @@ Route::get('/master', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/upload', 'UploadController@index');
-//Route::post('/store', 'UploadController@store');
-//Route::post('/show', 'UploadController@show');
-//Route::get('upload/get/{upload}', 'UploadController@get');
-//Route::post('upload/add', 'UploadController@add');
+Route::get('/upload', 'HomeController@upload');
+Route::post('/handleUpload', 'HomeController@handleUpload');
+
+Route::get('/uploaded', 'UploadedController@uploaded');
+Route::get('/uploaded/{id}', 'UploadedController@download');
 
 
-Route::get('/upload', 'HomepageController@index');
-Route::post('/upload', 'UploadController@upload');
+//Route::get('/upload', 'UploadController@upload');
+//Route::post('/handleupload', 'UploadController@handleupload');
+//
+//Route::post('handleUpload', 'FilesController@handleUpload');
+//Route::get('upload', 'FilesController@upload');
 
 
-Route::get('/download', 'DownloadController@index');
-Route::post('/download', 'DownloadController@download');
+//Route::get('/download', 'DownloadController@index');
+//Route::post('/download', 'DownloadController@download');
