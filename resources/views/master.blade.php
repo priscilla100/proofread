@@ -71,7 +71,7 @@
             <div class="content-container">
 
 
-                <div class="content-header">
+                <div class="content-header  text-center">
                     <h2 class="content-header-title">Blank Page</h2>
                     <ol class="breadcrumb">
                         <li><a href="./index.html">Home</a></li>

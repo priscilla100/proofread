@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'allowedFileTypes' => 'pdf, doc, xls, png, jpeg, jpg',
+    'allowedFileTypes' => 'png,txt,pdf,doc,xls,docx,jpeg,jpg',
     'maxFileSize' => 3000,
 
     /*

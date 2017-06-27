@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\UploadedFile;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
@@ -46,6 +47,7 @@ class HomeController extends Controller
             $rules = [
                 'file' => 'required|mimes:'.$allowedFileTypes.'|max:'.$maxFileSize
             ];
+
             $this->validate($request, $rules);
 
             $fileName = $file->getClientOriginalName();
@@ -53,12 +55,14 @@ class HomeController extends Controller
             $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
 
 
+            $user_id = Auth::id();
 
             if($uploaded){
 
                 UploadedFile::create([
                     'filename' => $fileName,
-                    'filepath' => $destinationPath
+                    'filepath' => $destinationPath,
+                    'user_id' => $user_id
                 ]);
 
             }
