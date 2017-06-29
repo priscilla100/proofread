@@ -8,7 +8,7 @@
                 {{--<div class="panel-heading">Dashboard</div>--}}
 
                 <div class="panel-body">
-                    <h2>Upload Files Here</h2>
+                    <h2 class="text-center">Upload Files Here</h2>
                     {{--@if(count($errors))--}}
                         {{--<ul>--}}
                             {{--@foreach($errors->all() as $error)--}}
@@ -28,12 +28,13 @@
                     {{--</ul>--}}
 
 
-                    <form action="/handleUpload" method="post" enctype="multipart/form-data" class="form-group">
+                    <form action="/handleUpload" method="post" enctype="multipart/form-data" class="form-group text-center">
                         {{ csrf_field() }}
                         <input type="file" name="file" multiple class="">
 
                         <div>
                             <input type="submit" class="btn-primary" value="Upload File">
+
 
                         </div>
                     </form>
@@ -45,3 +46,4 @@
     </div>
 
 @endsection
+

@@ -2,11 +2,11 @@
 
 @section('content')
 
-        <div class="title m-b-md">
+        <div class="title m-b-md text-center">
             High-Quality English Proofreading & Editing Services for All Academic & Scientific Papers
         </div>
 
-            <div class="">
+            <div class="text-center">
                 <p>Due to the specific HTML and CSS used to justify buttons
                 <p>(namely display: table-cell), the borders between them are doubled.
                 <p>In regular button groups, margin-left: -1px is used

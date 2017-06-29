@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h2>Uploaded Files are displayed Here</h2>
+    <h2 class="text-center">Uploaded Files are displayed Here</h2>
     @if(count($errors))
         <ul>
             @foreach($errors->all() as $error)
@@ -15,7 +15,7 @@
         </ul>
     @endif
 
-    <table class="table table-hover">
+    <table class="table table-bordered">
         <thead>
         <tr>
             <th>File Name</th>
@@ -30,18 +30,19 @@
         <tr>
             <td>{{ $file->filename }}</td>
             <td>{{ $file->user()->first()->name }}</td>
-            <td><a href="{{url('uploaded')}}/{{$file -> id}}"><button class="fa fa-download pull-right btn-secondary">   Download</button></a></td>
+            <td><a href="{{url('uploaded')}}/{{$file -> id}}"><button class=" btn-secondary">Download</button></a></td>
 
         </tr>
         @endforeach
         </tbody>
     </table>
 
+    <div class="text-center">
+
+        {{ $files->links() }}
 
 
-
-
-    {{ $files->links() }}
+    </div>
 
 
 

@@ -14,6 +14,9 @@
 
     <title>{{ config('app.name', 'Proof Read') }}</title>
 
+    <!-- If using flash()->important() or flash()->overlay(), you'll need to pull in the JS for Twitter Bootstrap. -->
+
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta charset="utf-8">
@@ -66,12 +69,24 @@
 
     <div class="container">
 
+
+
         <div class="content">
 
             <div class="content-container">
 
 
                 <div class="content-header  text-center">
+                    @if (Session::has('flash_message'))
+
+                        <div class="alert alert-success {{ Session::has('flash_message_important') ? 'alert-important' : '' }}">
+                            @if(Session::has('flash_message_important'))
+                                <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true">&times;</button>
+                            @endif
+                            {{ session()->get('flash_message') }}
+                        </div>
+
+                    @endif
                     <h2 class="content-header-title">Blank Page</h2>
                     <ol class="breadcrumb">
                         <li><a href="./index.html">Home</a></li>
@@ -107,7 +122,9 @@
 <!-- App JS -->
 <script src="{{ asset('Theme/js/target-admin.js') }}"></script>
 
-
+<script>
+    $('div.alert').not('.alert-important').delay(3000).slideUp(300);
+</script>
 
 
 </body>

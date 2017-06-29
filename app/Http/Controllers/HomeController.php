@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use App\UploadedFile;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+
         $this->middleware('auth');
     }
 
@@ -26,6 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        \Session::flash('flash_message', 'Login successful!');
+
+
         return view('home');
 
     }
@@ -67,6 +72,10 @@ class HomeController extends Controller
 
             }
         }
+
+        session()->flash('flash_message', 'File Upload was successfully added!');
+        session()->flash('flash_message_important', 'File Upload was successfully added!');
+
         return redirect()->to('/uploaded');
     }
 

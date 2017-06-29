@@ -15,7 +15,7 @@ class CreateTableDownload extends Migration
     {
         Schema::create('download', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->integer('user_id')->Unsigned()->Indexed();
             $table->string('filename');
             $table->timestamps();
         });
