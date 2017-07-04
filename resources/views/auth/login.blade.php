@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <h3 class="account-body-title">Welcome back to Target Admin.</h3>
+    <h3 class="account-body-title">Welcome back to our Proofread site!</h3>
 
     <h5 class="account-body-subtitle">Please sign in to get access.</h5>
 

@@ -3,19 +3,17 @@
 @section('content')
 
         <div class="title m-b-md text-center">
-            High-Quality English Proofreading & Editing Services for All Academic & Scientific Papers
+            Carefully-Examined English Proofreading & Editing Services for All Academic & Scientific Papers
         </div>
 
             <div class="text-center">
-                <p>Due to the specific HTML and CSS used to justify buttons
-                <p>(namely display: table-cell), the borders between them are doubled.
-                <p>In regular button groups, margin-left: -1px is used
-                <p>to stack the borders instead of removing them. However, margin doesn't work
-                <p>with display: table-cell. As a result, depending on your customizations
-                <p>to Bootstrap, you may wish to remove or re-color the borders.</p>
+                <p>We are here to solve all your English document proofreading issues.
+                <p>We carefully examine every text and correct typographical errors and mistakes in grammar,style and spelling .
+                <p>We also check for subject verb agreement in sentences and as much as possible
+                <p>check if the document being reviewed is not plagiarised.</p>
             </div>
 
-    </div> <!-- /.content -->
+
 
 
 

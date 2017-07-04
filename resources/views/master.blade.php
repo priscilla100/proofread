@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-    <title>Blank Page - Target Admin</title>
+    <title>Proof-Read</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -105,12 +105,13 @@
 
     </div> <!-- /.container -->
 
-
+@if(Auth::check())
 <footer class="footer">
 
    @include('include.footer')
 
 </footer>
+@endif
 
 <script src="{{ asset('Theme/js/libs/jquery-1.10.1.min.js') }}"></script>
 <script src="{{ asset('Theme/js/libs/jquery-ui-1.9.2.custom.min.js') }}"></script>

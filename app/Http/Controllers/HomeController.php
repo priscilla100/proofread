@@ -28,7 +28,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        \Session::flash('flash_message', 'Login successful!');
 
 
         return view('home');

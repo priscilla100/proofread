@@ -105,13 +105,13 @@
         @yield('account-footer')
     </div> <!-- /.account-wrapper -->
 
-
+@if(Auth::check())
 <footer class="footer">
 
    @include('include.footer')
 
 </footer>
-
+@endif
 <script src="{{ asset('Theme/js/libs/jquery-1.10.1.min.js') }}"></script>
 <script src="{{ asset('Theme/js/libs/jquery-ui-1.9.2.custom.min.js') }}"></script>
 <script src="{{ asset('Theme/js/libs/bootstrap.min.js') }}"></script>

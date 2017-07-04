@@ -98,12 +98,12 @@
 
                         <div class="form-group">
                             <label class="checkbox-inline">
-                                <input type="checkbox" class="" value="" tabindex="5"> I agree to the <a href="javascript:;" target="_blank">Terms of Service</a> &amp; <a href="javascript:;" target="_blank">Privacy Policy</a>
+                                <input type="checkbox" class="" value="" tabindex="8"> I agree to the <a href="javascript:;" target="_blank">Terms of Service</a> &amp; <a href="javascript:;" target="_blank">Privacy Policy</a>
                             </label>
                         </div> <!-- /.form-group -->
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-secondary btn-block btn-lg" tabindex="8">
+                            <button type="submit" class="btn btn-secondary btn-block btn-lg" tabindex="9">
                                 Create My Account &nbsp; <i class="fa fa-play-circle"></i>
                             </button>
                         </div> <!-- /.form-group -->

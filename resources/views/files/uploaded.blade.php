@@ -30,7 +30,7 @@
         <tr>
             <td>{{ $file->filename }}</td>
             <td>{{ $file->user()->first()->name }}</td>
-            <td><a href="{{url('uploaded')}}/{{$file -> id}}"><button class=" btn-secondary">Download</button></a></td>
+            <td><a href="{{url('uploaded')}}/{{$file -> id}}"><button class=" btn-secondary"><i class="fa fa-download"></i> Download</button></a></td>
 
         </tr>
         @endforeach
