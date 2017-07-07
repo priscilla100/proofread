@@ -36,11 +36,21 @@ class HomeController extends Controller
     public function upload(){
         $directory = 'FileUpload';
 //        $files = Storage::files($directory);
+        $user = Auth::user();
+        if($user->user_type = '1')
+        {
+            $files = UploadedFile::all();
+            return view('files.upload')->with(array('files' => $files));
+        }
+        else{
+            $files = UploadedFile::all();
+
+            return view('files.upload', $files->load('users', 'files'));
+
+        }
 
 
-        $files = UploadedFile::all();
 
-        return view('files.upload')->with(array('files' => $files));
     }
     public function handleUpload(Request $request){
         if($request->hasFile('file')){

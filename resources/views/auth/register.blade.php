@@ -102,6 +102,7 @@
                             </label>
                         </div> <!-- /.form-group -->
 
+
                         <div class="form-group">
                             <button type="submit" class="btn btn-secondary btn-block btn-lg" tabindex="9">
                                 Create My Account &nbsp; <i class="fa fa-play-circle"></i>

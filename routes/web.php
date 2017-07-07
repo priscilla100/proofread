@@ -30,6 +30,19 @@ Route::post('/handleUpload', 'HomeController@handleUpload');
 Route::get('/uploaded', 'UploadedController@uploaded');
 Route::get('/uploaded/{id}', 'UploadedController@download');
 
+Route::get('register/verify/{confirmationCode}', [
+    'as' => 'confirmation_path',
+    'uses' => 'RegistrationController@confirm'
+]);
+
+
+Route::get('/profile', 'ProfileController@index');
+Route::post('/profile', 'ProfileController@profile_update');
+
+
+Route::get('/change-password', 'PasswordController@index');
+Route::post('/change-password', 'PasswordController@change-password');
+
 
 //Route::get('/upload', 'UploadController@upload');
 //Route::post('/handleupload', 'UploadController@handleupload');

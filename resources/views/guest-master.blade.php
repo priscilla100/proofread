@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-    <title>Blank Page - Target Admin</title>
+    <title>Proofread App</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -122,6 +122,7 @@
 <!-- App JS -->
 <script src="{{ asset('Theme/js/target-admin.js') }}"></script>
 
+<script src="{{ asset('js/custom.js') }}"></script>
 
 
 

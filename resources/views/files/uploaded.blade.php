@@ -39,8 +39,6 @@
 
     <div class="text-center">
 
-        {{ $files->links() }}
-
 
     </div>
 

@@ -22,6 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('institution');
             $table->string('password');
             $table->enum('user_type', ['user', 'admin']);
+            $table->boolean('confirmed')->default(0);
+            $table->string('confirmation_code')->nullable();
+            $table->string('profile_picture')->default('default.jpg');
+            $table->string('website')->nullable();
+
             $table->rememberToken();
             $table->timestamps();
         });

@@ -123,6 +123,10 @@
 <!-- App JS -->
 <script src="{{ asset('Theme/js/target-admin.js') }}"></script>
 
+{{--Custom Javascript--}}
+<script src="{{ asset('js/custom.js') }}"></script>
+
+
 <script>
     $('div.alert').not('.alert-important').delay(3000).slideUp(300);
 </script>

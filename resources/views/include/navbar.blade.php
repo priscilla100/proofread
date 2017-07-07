@@ -154,14 +154,31 @@
                 </li>
             @else
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+                        <img src="/avatar/{{ Auth::user()->profile_picture }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
                         {{ Auth::user()->name }} <span class="caret"></span>
+
+                        {{--<span class="">{{ Auth::user()->name }}</span>--}}
+                        {{--<img src="{{ asset('Theme/img/avatars/avatar-1-xs.jpg') }}" class="navbar-profile-avatar" alt="">--}}
+                        {{--<i class="fa fa-caret-down"></i>--}}
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="{{ asset('') }}">
+                            <a href="{{ url('/profile') }}">
+                                <i class="fa fa-user"></i>
+                                &nbsp;&nbsp;My Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ asset('Theme/page-settings.html') }}">
                                 <i class="fa fa-cogs"></i>
                                 &nbsp;&nbsp;Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/change-password') }}" >
+                                <i class="fa fa-lock"></i>
+                                &nbsp;&nbsp;Change Password
                             </a>
                         </li>
 
@@ -170,7 +187,8 @@
                             <a href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                Logout
+                                <i class="fa fa-sign-out"></i>
+                                &nbsp; Logout
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
